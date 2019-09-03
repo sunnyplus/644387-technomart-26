@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Alexey Kornilov](https://up.htmlacademy.ru/htmlcss/26/user/644387).
-* Наставник: `Неизвестно`.
+* Наставник: [Олег Зубов](https://htmlacademy.ru/profile/id42701).
 
 ---
 
