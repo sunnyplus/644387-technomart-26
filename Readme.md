@@ -3,7 +3,7 @@
 * Студент: [Alexey Kornilov](https://up.htmlacademy.ru/htmlcss/26/user/644387).
 * Наставник: [Олег Александрович Зубов](https://htmlacademy.ru/profile/id42701).
 
----
+----
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
 _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`._
