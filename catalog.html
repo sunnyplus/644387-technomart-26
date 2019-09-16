@@ -9,7 +9,11 @@
       <section>
           <ul>
               <li><a href="/"><img src="img/logo-technomart.svg" alt="Техномарт"></a></li>
-              <li>Поиск</li> <!-- форма поиска -->
+              <li>
+                  <form action="http://echo.htmlacademy.ru" method="post">
+                    <input type="search" name="search" placeholder="Поиск:">
+                  </form>
+                </li>
               <li><a href="#">Закладки:0</a></li>
               <li><a href="#">Корзина:10</a></li>
               <li><a href="#">Оформить заказ</a></li>
@@ -163,10 +167,10 @@
       <section>
         <p>2010-2019 Компания "Техномарт" <br>Все права защищены</p>
         <ul>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-        </ul>
+            <li><a href="#" aria-label="Вконтакте"></a></li>
+            <li><a href="#" aria-label="Фейсбук"></a></li>
+            <li><a href="#" aria-label="Инстаграм"></a></li>
+          </ul>
         <p>
           Обратная связь: <br><span>mail@htmlacademy.ru</span>
         </p>
@@ -175,5 +179,10 @@
         </p>
       </section>
     </footer>
+    <form action="#" method="post">
+      <p>Товар добавлен в корзину!</p>
+      <a href="#">Оформить заказ</a>
+      <button type="button">Продолжить покупки</button>
+    </form>
   </body>
 </html>
