@@ -7,19 +7,21 @@
   <body>
     <header>
       <section>
+          <h2 class="visually-hidden">Авторизация</h2>
           <ul>
-              <li><a href="/"><img src="img/logo-technomart.svg" alt="Техномарт"></a></li>
-              <li>
-                  <form action="http://echo.htmlacademy.ru" method="post">
-                    <input type="search" name="search" placeholder="Поиск:">
-                  </form>
-                </li>
-              <li><a href="#">Закладки:0</a></li>
-              <li><a href="#">Корзина:10</a></li>
-              <li><a href="#">Оформить заказ</a></li>
-            </ul>
+            <li><a href="/"><img src="img/logo-technomart.svg" alt="Техномарт"></a></li>
+            <li>
+                <form action="http://echo.htmlacademy.ru" method="post">
+                  <input type="search" name="search" placeholder="Поиск:">
+                </form>
+              </li>
+            <li><a href="#">Закладки:0</a></li>
+            <li><a href="#">Корзина:10</a></li>
+            <li><a href="#">Оформить заказ</a></li>
+          </ul>
       </section>
       <section>
+        <h2 class="visually-hidden">Личный кабинет</h2>
         <ul>
           <li><p>Интернет-магазин строительных материалов и инструментов для ремонта</p></li>
           <li>
@@ -45,7 +47,6 @@
           <li><a href="#">Контакты</a></li>
         </ul>
       </nav>
-
     </header>
     <main>
       <nav>
@@ -56,27 +57,69 @@
         </ul>
       </nav>
       <h1>Перфораторы</h1>
-      <section><!-- фильтр -->
-        <h2>Цена:</h2>
-        <h2>Производители:</h2>
-        <ul>
-          <li>BOSCH</li>
-          <li>Интерскол</li>
-          <li>MAKITA</li>
-          <li>DEWALT</li>
-          <li>HITACHI</li>
-        </ul>
-        <h2>Питание:</h2>
-        <ul>
-          <li>Аккумуляторные</li>
-          <li>Сетевые</li>
-        </ul>
-        <button>Показать</button>
+      <section>
+        <h2>Фильтр:</h2>
+        <form action="#" method="GET">
+          <fieldset>
+            <legend>Цена:</legend>
+            <input type="range" name="price-range" min="0" max="30000">
+            <input type="number" name="price-min">
+            <span>-</span>
+            <input type="number" name="price-max" max="30000">
+          </fieldset>
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="bosch" id="filter-bosch" checked>
+                <label for="filter-bosch">BOSCH</label>
+              </li>
+              <li>
+                <input type="checkbox" name="interscol" id="filter-interscol">
+                <label for="filter-interscol">ИНТЕРСКОЛ</label>
+              </li>
+              <li>
+                <input type="checkbox" name="makita" id="filter-makita" checked>
+                <label for="filter-makita">MAKITA</label>
+              </li>
+              <li>
+                <input type="checkbox" name="dewalt" id="filter-dewalt">
+                <label for="filter-dewalt">DEWALT</label>
+              </li>
+              <li>
+                <input type="checkbox" name="hitachi" id="filter-hitachi">
+                <label for="filter-hitachi">HITACHI</label>
+              </li>
+            </ul>            
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
+              <ul>
+                <li>
+                  <input type="radio" name="pitanie" id="filter-accum" checked>
+                  <label for="filter-accum">Аккумуляторные</label>
+                </li>
+                <li>
+                  <input type="radio" name="pitanie" id="filter-setev">
+                  <label for="filter-setev">Сетевые</label>
+                </li>
+              </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
       </section>
       <section>
-          <!-- сортировка+ -->
+        <h2>Сортировка:</h2>
+        <ul>
+          <li><a href="#">по цене</a></li>
+          <li><a href="#">по типу</a></li>
+          <li><a href="#">по функционалу</a></li>
+          <li><span></span></li>
+          <li><span></span></li>
+        </ul>
       </section>
       <section>
+        <h2 class="visually-hidden">Каталог перфораторов</h2>
         <ul>
           <li>
             <a href="#"><img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 3000"></a>
@@ -148,28 +191,30 @@
     </main>
     <footer>
       <section>
-          <p><a href="/"><img src="img/logo-technomart.svg" alt="Техномарт"></a></p>
-          <ul>
-            <li><a href="#">Компания</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-          <p>г.Санкт-Петербург, ул.Большая Конюшенная, д.79/8 <br>+7(812)555-05-55</p>
-          <ul>
-            <li><a href="#">Материалы</a></li>
-            <li><a href="#">Техника</a></li>
-            <li><a href="#">Инструмент</a></li>
-            <li><a href="#">Спецпредложения</a></li>
-          </ul>    
+        <h2 class="visually-hidden">О Компании Техномарт</h2>
+        <p><a href="/"><img src="img/logo-technomart.svg" alt="Техномарт"></a></p>
+        <ul>
+          <li><a href="#">Компания</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <p>г.Санкт-Петербург, ул.Большая Конюшенная, д.79/8 <br>+7(812)555-05-55</p>
+        <ul>
+          <li><a href="#">Материалы</a></li>
+          <li><a href="#">Техника</a></li>
+          <li><a href="#">Инструмент</a></li>
+          <li><a href="#">Спецпредложения</a></li>
+        </ul>    
       </section>
       <section>
+        <h2 class="visually-hidden">Техномарт в социальных сетях</h2>
         <p>2010-2019 Компания "Техномарт" <br>Все права защищены</p>
         <ul>
-            <li><a href="#" aria-label="Вконтакте"></a></li>
-            <li><a href="#" aria-label="Фейсбук"></a></li>
-            <li><a href="#" aria-label="Инстаграм"></a></li>
+            <li><a href="#" aria-label="Техномарт во Вконтакте"></a></li>
+            <li><a href="#" aria-label="Техномарт в Фейсбук"></a></li>
+            <li><a href="#" aria-label="Техномарт в Инстаграм"></a></li>
           </ul>
         <p>
           Обратная связь: <br><span>mail@htmlacademy.ru</span>
@@ -179,10 +224,11 @@
         </p>
       </section>
     </footer>
-    <form action="#" method="post">
-      <p>Товар добавлен в корзину!</p>
+    <section>
+      <h2>Товар добавлен в корзину!</h2>
       <a href="#">Оформить заказ</a>
       <button type="button">Продолжить покупки</button>
-    </form>
+      <button type="button" aria-label="Закрыть">X</button>
+    </section>
   </body>
 </html>

@@ -7,19 +7,21 @@
   <body>
     <header>
       <section>
-          <ul>
-              <li><a href="/"><img src="img/logo-technomart.svg" alt="Техномарт"></a></li>
-              <li>
-                <form action="http://echo.htmlacademy.ru" method="post">
-                  <input type="search" name="search" placeholder="Поиск:">
-                </form>
-              </li>
-              <li><a href="#">Закладки:0</a></li>
-              <li><a href="#">Корзина:0</a></li>
-              <li><a href="#">Оформить заказ</a></li>
-            </ul>
+        <h2 class="visually-hidden">Авторизация</h2>
+        <ul>
+            <li><a href="/"><img src="img/logo-technomart.svg" alt="Техномарт"></a></li>
+            <li>
+              <form action="http://echo.htmlacademy.ru" method="post">
+                <input type="search" name="search" placeholder="Поиск:">
+              </form>
+            </li>
+            <li><a href="#">Закладки:0</a></li>
+            <li><a href="#">Корзина:0</a></li>
+            <li><a href="#">Оформить заказ</a></li>
+          </ul>
       </section>
       <section>
+        <h2 class="visually-hidden">Личный кабинет</h2>
         <ul>
           <li><p>Интернет-магазин строительных материалов и инструментов для ремонта</p></li>
           <li>
@@ -41,10 +43,10 @@
           <li><a href="">Контакты</a></li>
         </ul>
       </nav>
-
     </header>
     <main>
       <section>
+        <h2 class="visually-hidden">Группа баннеров на главной странице</h2>
         <dl>
           <dt>Материалы</dt>
           <dd><a href="#">На любой вкус</a></dd>
@@ -94,8 +96,8 @@
       </section>
       <section>
         <div>
-            <h2>популярные производители:</h2>
-            <a href="#">все производители</a>
+          <h2>популярные производители:</h2>
+          <a href="#">все производители</a>
         </div>
         <ul>
           <li><a href="#"><img src="img/bosch.png" alt="Boch"></a></li>
@@ -140,13 +142,14 @@
         <div>
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, <br>заехав в наш офис:</p>
-          <div><img src="img/map.png" alt="Контакты"></div>
+          <div><img src="img/map.png" alt="Офис компании Техномарт по адресу г.Санкт-Петербург, ул.Большая Конюшенная, д.79/8"></div>
           <h2>Заблудились? Напишите нам</h2>
         </div>
       </section>
     </main>  
     <footer>
       <section>
+          <h2 class="visually-hidden">О Компании</h2>
           <p><a href="/"><img src="img/logo-technomart.svg" alt="Техномарт"></a></p>
           <ul>
             <li><a href="#">Компания</a></li>
@@ -164,12 +167,13 @@
           </ul>    
       </section>
       <section>
+        <h2 class="visually-hidden">Техномарт в социальных сетях</h2>
         <p>2010-2019 Компания "Техномарт" <br>Все права защищены</p>
         <ul>
-          <li><a href="#" aria-label="Вконтакте"></a></li>
-          <li><a href="#" aria-label="Фейсбук"></a></li>
-          <li><a href="#" aria-label="Инстаграм"></a></li>
-        </ul>
+            <li><a href="#" aria-label="Техномарт во Вконтакте"></a></li>
+            <li><a href="#" aria-label="Техномарт в Фейсбук"></a></li>
+            <li><a href="#" aria-label="Техномарт в Инстаграм"></a></li>
+          </ul>
         <p>
           Обратная связь: <br><span>mail@htmlacademy.ru</span>
         </p>
@@ -178,30 +182,34 @@
         </p>
       </section>
     </footer>
-    <form action="http://echo.htmlacademy.ru" method="post">
-      <div>
+    <section>
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <form action="http://echo.htmlacademy.ru" method="post">
+        <div>
+          <p>
+            <label for="user-firstname">Ваше имя:</label>
+          </p>
+          <p>
+            <input type="text" name="firstname" id="user-firstname" placeholder="Имя Фамилия">
+          </p>
+        </div>
+        <div>
+          <p>
+            <label for="user-email">Ваш e-mail:</label>
+          </p>
+          <p>
+            <input name="email" type="email" id="user-email" placeholder="email@example.com">
+          </p>
+        </div>
         <p>
-          <label for="user-firstname">Ваше имя:</label>
+          <label for="user-message">Текст письма:</label>
         </p>
         <p>
-          <input type="text" name="firstname" id="user-firstname" placeholder="Имя Фамилия">
+          <textarea name="message" id="user-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
         </p>
-      </div>
-      <div>
-        <p>
-          <label for="user-email">Ваш e-mail:</label>
-        </p>
-        <p>
-          <input name="email" type="email" id="user-email" placeholder="email@example.com">
-        </p>
-      </div>
-      <p>
-        <label for="user-message">Текст письма:</label>
-      </p>
-      <p>
-        <textarea name="message" id="user-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-      </p>
-      <button type="submit">Отправить</button>
-    </form>
+        <button type="submit">Отправить</button>
+        <button type="button" aria-label="Закрыть">X</button>
+      </form>
+    </section>
   </body>
 </html>
