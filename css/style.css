@@ -102,10 +102,10 @@ ul{
     background-color: #212a3a;
 }
 .bookmarks-button a:active, .basket-button a:active{
-    color: rgba(255,255,255,0.6);
+    opacity: 0.6;
 }
 .order-button a:active{
-    color: rgba(255,255,255,0.5);
+    opacity: 0.5;
 }
 .search-field input{
     background-color: inherit;
@@ -146,7 +146,7 @@ ul{
     color: #ee3643;
 }
 .signin:active, .signup:active, .user-info:active{
-    color: rgba(0,0,0,0.3);
+    opacity: 0.3;
 }
 .user-info + ul a{
     font-size: 16px;
@@ -157,7 +157,7 @@ ul{
     color: #ee3643;
 }
 .user-info + ul a:active{
-    color: rgba(51,51,102,0.3);
+    opacity: 0.3;
 }
 /* Навигация по сайту */
 .site-navigation{
@@ -169,7 +169,7 @@ ul{
     background-color: #293449;
 }
 .site-navigation li a:active{
-    color: rgba(255,255,255,0.5);
+    opacity: 0.5;
 }
 
 /* Хлебные крошки */
@@ -219,6 +219,8 @@ legend{
 }
 .products p{
     display: block;
+    width: 141px;
+    height: 38px;
     text-transform: uppercase;
     line-height: 18px;
 }
@@ -235,20 +237,37 @@ legend{
     color: #ffffff;
 }
 .products li button{
+    width: 135px;
+    height: 38px;
+    border-radius: 5px;
     font-family: Cuprum;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
 }
+/* кнопка КУПИТЬ */
 .products li button:first-of-type{
     color: #ffffff;
     border: none;
     box-shadow: inset 0 -3px 0 #367315;
     background-color: #63a63e;
 }
+.products li button:first-of-type:hover, .products li button:first-of-type:focus{
+    background-color: #5fbb2d;
+}
+.products li button:first-of-type:active{
+    background-color: #518534;
+}
+/* Кнопка В ЗАКЛАДКИ */
 .products li button:last-of-type{
     border: 3px solid #63a63e;
     background-color: #ffffff;
+}
+.products li button:last-of-type:hover, .products li button:last-of-type:focus{
+    border-color: #32425c;
+}
+.products li button:last-of-type:active{
+    opacity: 0.3;
 }
 .shop-info h2{
     font-size: 30px;
@@ -286,11 +305,14 @@ legend{
     font-size: 18px;
     line-height: 24px;
 }
+.footer-navigation a:hover, .footer-navigation a:focus{
+    text-decoration: underline;
+}
+.footer-navigation a:active{
+    opacity: 0.5;
+}
 .footer-navigation ul:last-of-type a{
     color: #ffd180;
-}
-.footer-navigation ul:last-of-type li:nth-child(2) a{
-    color: #ffda96;
 }
 .social-networks{
     background-color: #293449;
@@ -301,6 +323,19 @@ legend{
 .social-networks a{
     color: #ffd180;
 }
+.social-networks a:hover, .social-networks a:focus{
+    text-decoration: underline;
+}
+.social-networks a:active{
+    color: #ee3643;
+}
+.social-icons a{
+    background-color: #212a3a;
+}
+.social-icons a:hover, .social-icons a:focus{
+    background-color: #ee3643;
+}
+
 
 .visually-hidden {
     position: absolute;
