@@ -50,11 +50,266 @@
         url('MyriadPro-Regular.woff') format('woff');
 }
 
-  body{
-      margin: 0;
-      padding: 0;
-      font-family: "Cuprum",sans-serif;
-      font-weight: 400;
-      color: #000000;
-      font-size: 17px;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Cuprum",sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 17px;
+    background-color: #ffffff;
+}
+header{
+    background-color: #f3f7f8;
+}
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.main-navigation ul:first-child{
+    background-color: #293449;
+    line-height: 18px;
+}
+.main-navigation ul:first-child, .main-navigation a, .site-navigation a{
+    color: #ffffff;
+}
+/* логотип */
+.logo{
+    box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
+    background-color: #ee3643;
+}
+.logo:hover{
+    background-color: #ca2c37;
+}
+.logo:active{
+    background-color: #ba2732;
+}
+/* кнопки главной навигации */
+.order-button{
+    background-color: #63a63e;
+}
+.order-button:hover{
+    background-color: #5fbb2d;
+}
+.order-button:active{
+    background-color: #518534;
+}
+.bookmarks-button:hover, .basket-button:hover, .search-field:hover{
+    background-color: #212a3a;
+}
+.bookmarks-button a:active, .basket-button a:active{
+    color: rgba(255,255,255,0.6);
+}
+.order-button a:active{
+    color: rgba(255,255,255,0.5);
+}
+.search-field input{
+    background-color: inherit;
+    border: none;
+}
+.search-field input:focus{
+    background-color: white;
+    color: #000000;
+    line-height: 18px;
+}
+.search-field input:focus + label{
+    font-size: 0px;
+}
+.shop-description{
+    line-height: 23px;
+    font-style: italic;
+    font-size: 16px;
+    color: #ee3643;
+}
+.shop-phone{
+    border: 3px solid #ffffff;
+    line-height: 21px;
+    color: #ee3643;
+    font-size: 21px;
+}
+.shop-address{
+    color: #32425c;
+    font-size: 14px;
+    line-height: 24px;
+}
+.signin, .signup, .user-info{
+    font-size: 21px;
+    line-height: 21px;
+    background-color: #ffffff;
+    border: none;
+}
+.signin:hover, .signup:hover, .signin:focus, .signup:focus{
+    color: #ee3643;
+}
+.signin:active, .signup:active, .user-info:active{
+    color: rgba(0,0,0,0.3);
+}
+.user-info + ul a{
+    font-size: 16px;
+    color: #32425c;
+    text-decoration: underline;
+}
+.user-info + ul a:hover, .user-info + ul a:focus{
+    color: #ee3643;
+}
+.user-info + ul a:active{
+    color: rgba(51,51,102,0.3);
+}
+/* Навигация по сайту */
+.site-navigation{
+    background-color: #32425c;
+    box-shadow: inset 0 -5px 0 #293449;
+    line-height: 17px;
+}
+.site-navigation li:hover{
+    background-color: #293449;
+}
+.site-navigation li a:active{
+    color: rgba(255,255,255,0.5);
+}
+
+/* Хлебные крошки */
+.breadcrumbs a{
+    font-family: "PT Sans";
+    font-size: 13px;
+    color: #000000;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+h1,h2,legend,fieldset{
+    text-transform: uppercase;
+}
+h1{
+    color: #32425c;
+    font-size: 30px;
+    line-height: 30px;
+}
+fieldset{
+    border:none;
+    font-family: "PT Sans";
+}
+fieldset label{
+    line-height: 20px;
+    font-size: 15px;
+}
+legend{
+    font-family: "PT Sans";
+    font-weight: 700;
+    line-height: 30px;
+}
+.show-products{
+    font-family: "PT Sans";
+    font-size: 13px;
+    line-height: 18px;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+}
+/* Каталог товаров */
+.products{
+    font-family: "PT Sans";
+    font-weight: 700;
+}
+.products h3{
+    font-size: 18px;
+    line-height: 20px;
+}
+.products p{
+    display: block;
+    text-transform: uppercase;
+    line-height: 18px;
+}
+.products li p:first-of-type{
+    color: #999999;
+    text-decoration: line-through;
+}
+.products li:nth-child(3n) p{
+    text-decoration: none;
+}
+.products li p:last-of-type{
+    background-image: url('../img/red-button.svg');
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+.products li button{
+    font-family: Cuprum;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+.products li button:first-of-type{
+    color: #ffffff;
+    border: none;
+    box-shadow: inset 0 -3px 0 #367315;
+    background-color: #63a63e;
+}
+.products li button:last-of-type{
+    border: 3px solid #63a63e;
+    background-color: #ffffff;
+}
+.shop-info h2{
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.shop-info p{
+    font-family: "PT Sans",sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+.shop-info ul{
+    font-size: 18px;
+    line-height: 20px;
+}
+.shop-info a{
+    display: block;
+    background-color: #ee3643;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 18px;
+}
+/* Навигация подвала */
+.footer-navigation{
+    background-color: #32425c;
+}
+.footer-navigation p{
+    color: #f3f7f9;
+    line-height: 24px;
+    font-size: 18px;
+}
+.footer-navigation a{
+    color: #f1f5f7;
+    font-size: 18px;
+    line-height: 24px;
+}
+.footer-navigation ul:last-of-type a{
+    color: #ffd180;
+}
+.footer-navigation ul:last-of-type li:nth-child(2) a{
+    color: #ffda96;
+}
+.social-networks{
+    background-color: #293449;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+}
+.social-networks a{
+    color: #ffd180;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
+  
