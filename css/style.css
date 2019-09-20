@@ -269,12 +269,12 @@ legend{
 .products li button:last-of-type:active{
     opacity: 0.3;
 }
-.shop-info h2{
+h2{
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
 }
-.shop-info p{
+.shop-info p, .services p{
     font-family: "PT Sans",sans-serif;
     font-size: 13px;
     line-height: 24px;
@@ -290,6 +290,37 @@ legend{
     font-size: 14px;
     text-transform: uppercase;
     line-height: 18px;
+}
+.services{
+    background-color: #f4f8f9;
+    background-image: url("../img/layer_131.png");
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+}
+.services li{
+    background-color: #32425c;
+    box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
+    width: 240px;
+    height: 61px;
+}
+.services li:hover{
+    box-shadow: 0 1px 0 #ffffff, inset 0 1px 0 #ffffff;
+    background-color: #ffffff;
+}
+.services a{
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 30px;
+    font-weight: 700;
+}
+.services a:hover, a:focus{
+    color: #32425c;
+}
+.services h3{
+    font-size: 36px;
+    color: #32425c;
+    line-height: 36px;
+    text-transform: uppercase;
 }
 /* Навигация подвала */
 .footer-navigation{
@@ -335,7 +366,78 @@ legend{
 .social-icons a:hover, .social-icons a:focus{
     background-color: #ee3643;
 }
-
+/* Группа баннеров на главной странице */
+.banners-group div{
+    font-size: 24px;
+    line-height: 30px;
+    color: #ffffff;
+    width: 300px;
+    height: 123px;
+}
+.banners-group div a{
+    display: block;
+    width: 135px;
+    height: 38px;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 18px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.banners-group .forth{
+    width: 620px;
+    height: 266px;
+}
+.banners-group .forth a{
+    width: 195px;
+    height: 38px;
+    background-color: #ee3643;
+}
+.first{
+    background-color: #ffbf47;
+    background-image: url("../img/icon-1.svg");
+    background-repeat: no-repeat;
+    background-position: 80% 50%;
+}
+.second{
+    background-color: #3bbce3;
+}
+.third{
+    background-color: #dc91d8;
+}
+.forth{
+    background-image: url("../img/layer_99.jpg");
+    background-repeat: no-repeat;
+}
+.forth p:first-of-type{
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.forth p:last-of-type{
+    font-size: 18px;
+    line-height: 24px;
+}
+.fifth{
+    background-color: #8ed78f;
+}
+.sixth{
+    background-color: #ffc047;
+}
+/* Красная кнопка */
+a.red-button{
+    display: block;
+    background-color: #ee3643;
+    height: 38px;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+.popular-producers, .popular-items{
+    background-color: #f9f5f0;
+}
 
 .visually-hidden {
     position: absolute;
