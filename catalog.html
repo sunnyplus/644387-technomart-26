@@ -12,7 +12,7 @@
           <h2 class="visually-hidden">Главная навигация</h2>
           <nav class="main-navigation">
             <ul>
-              <li class="logo"><a href="/"><img src="img/logo-technomart.svg" alt="Техномарт"></a></li>
+              <li class="logo"><a href="index.html"><img src="img/logo-technomart.svg" alt="Техномарт"></a></li>
               <li class="search-field">
                 <form action="http://echo.htmlacademy.ru" method="post">
                   <label for="search">Поиск:</label><!-- нужно убрать лейбл при фокусе на инпут -->
@@ -41,7 +41,7 @@
         </div>
         <nav class="site-navigation">
           <ul>
-            <li><a href="#">Главная</a></li>
+            <li><a href="index.html">Главная</a></li>
             <li><a href="#">Компания</a></li>
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="#">Новости</a></li>
@@ -60,15 +60,15 @@
         </ul>
       </nav>
       <h1>Перфораторы</h1>
-      <section>
-        <h2>Фильтр:</h2>
+      <section class="filter">
+        <h3>Фильтр:</h3>
         <form action="http://echo.htmlacademy.ru" method="GET">
           <fieldset>
             <legend>Цена:</legend>
-            <input type="range" name="price-range" min="0" max="30000">
-            <input type="number" name="price-min">
+            <input type="range" name="price-range" min="0" max="40000" value="30000">
+            <input type="number" name="price-min" value="0">
             <span>-</span>
-            <input type="number" name="price-max" max="30000">
+            <input type="number" name="price-max" max="30000" value="30000">
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
@@ -108,22 +108,18 @@
                 </li>
               </ul>
           </fieldset>
-          <button class="show-products" type="submit">Показать</button>
+          <button class="button show-products" type="submit">Показать</button>
         </form>
       </section>
-      <section>
-        <h2>Сортировка:</h2>
-        <ul>
-          <li><a href="#">по цене</a></li>
-          <li><a href="#">по типу</a></li>
-          <li><a href="#">по функционалу</a></li>
-          <li><span></span></li>
-          <li><span></span></li>
-        </ul>
+      <section class="sort">
+        <h3>Сортировка:</h3>
+        <a>по цене</a>
+        <a>по типу</a>
+        <a>по функционалу</a>
       </section>
-      <section>
+      <section class="products">
         <h2 class="visually-hidden">Каталог перфораторов</h2>
-        <ul class="products">
+        <ul>
           <li>
             <a href="#"><img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 3000"></a>
             <h3>Перфоратор BOSCH BFG 3000</h3>
@@ -178,15 +174,15 @@
           </li>
         </ul>    
       </section>
-      <nav>
+      <nav class="pagination">
         <ul>
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">следующая</a></li>
+          <li><a class="button current" href="#">1</a></li>
+          <li><a class="button" href="#">2</a></li>
+          <li><a class="button" href="#">3</a></li>
+          <li><a class="button" href="#">следующая</a></li>
         </ul>
       </nav>
-      <section>
+      <section class="perforator-info">
         <h2>пара слов о перфораторах</h2>
         <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
             Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
@@ -196,7 +192,7 @@
       <section class="footer-navigation">
         <h2 class="visually-hidden">Навигация подвала</h2>
         <ul>
-          <li class="logo"><a href="/"><img src="img/logo-technomart.svg" alt="Техномарт"></a></li>
+          <li class="logo"><a href="index.html"><img src="img/logo-technomart.svg" alt="Техномарт"></a></li>
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="catalog.html">Каталог</a></li>

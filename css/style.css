@@ -161,15 +161,23 @@ ul{
 }
 /* Навигация по сайту */
 .site-navigation{
+    height: 60px;
     background-color: #32425c;
     box-shadow: inset 0 -5px 0 #293449;
     line-height: 17px;
+}
+.site-navigation ul{
+    display: flex;
+    justify-content: space-around;
 }
 .site-navigation li:hover{
     background-color: #293449;
 }
 .site-navigation li a:active{
     opacity: 0.5;
+}
+.site-navigation li a{
+    line-height: 60px;
 }
 
 /* Хлебные крошки */
@@ -188,6 +196,7 @@ h1{
     font-size: 30px;
     line-height: 30px;
 }
+/* Формы */
 fieldset{
     border:none;
     font-family: "PT Sans";
@@ -196,12 +205,16 @@ fieldset label{
     line-height: 20px;
     font-size: 15px;
 }
+fieldset input:disabled + label{
+    color: rgba(0, 0, 0, 0.4);
+}
 legend{
     font-family: "PT Sans";
     font-weight: 700;
     line-height: 30px;
 }
 .show-products{
+    width: 140px;
     font-family: "PT Sans";
     font-size: 13px;
     line-height: 18px;
@@ -210,6 +223,13 @@ legend{
 }
 /* Каталог товаров */
 .products{
+    width: 700px;
+}
+.products ul{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     font-family: "PT Sans";
     font-weight: 700;
 }
@@ -223,6 +243,11 @@ legend{
     height: 38px;
     text-transform: uppercase;
     line-height: 18px;
+}
+.products li{
+    width: 220px;
+    height: 318px;
+    border: 1px solid #e5e5e5;
 }
 .products li p:first-of-type{
     color: #999999;
@@ -244,6 +269,50 @@ legend{
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
+}
+.products li:hover{
+    border: none;
+    box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+/* Фильтр */
+input{
+    font-family: "PT Sans";
+    line-height: 38px;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    background-color: #f7f3ec;
+}
+input[type=number]{
+    width: 95px;
+    height: 38px;
+}
+.sort{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 700px;
+    height: 38px;
+    background-color: #f7f3ec;
+    font-family: "PT Sans";
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.filter h3, .sort h3{
+    font-size: 13px;
+    line-height: 18px;
+}
+.sort a{
+    color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px dotted #ee3643;
+}
+.sort a:hover, .sort a:focus{
+    color: #000000;
+    border-bottom-style: solid;
+}
+.sort a:active{
+    border: none;
+    color: #ee3643;
 }
 /* кнопка КУПИТЬ */
 .products li button:first-of-type{
@@ -269,12 +338,41 @@ legend{
 .products li button:last-of-type:active{
     opacity: 0.3;
 }
+/* Пагинация */
+.pagination ul{
+    display: flex;
+}
+.pagination li a{
+    border: 1px solid #e5e5e5;
+    width: 38px;
+    color: #000000;
+    font-family: "PT Sans";
+    font-size: 13px;
+    line-height: 18px;
+}
+.pagination li a:hover, .pagination li a:focus{
+    border-color: #bdc6ca;
+}
+.pagination li a:active, .pagination a.current{
+    border-color: #ee3643;
+}
+.pagination li:last-of-type a{
+    width: 138px;
+}
+.pagination a.current{
+    color: #ffffff;
+    background-color: #ee3643;
+}
+.pagination a.current:hover{
+    border-color: #ee3643;
+}
+/* Кнопки */
 h2{
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
 }
-.shop-info p, .services p{
+.shop-info p, .services p, .perforator-info p{
     font-family: "PT Sans",sans-serif;
     font-size: 13px;
     line-height: 24px;
@@ -298,23 +396,25 @@ h2{
     background-position: 90% 50%;
 }
 .services li{
+    display: flex;
+    align-items: center;
+    padding-left: 22px;
     background-color: #32425c;
     box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
     width: 240px;
     height: 61px;
+    font-size: 21px;
+    color: #ffffff;
+    line-height: 30px;
 }
 .services li:hover{
+    background-color: #293449;
+}
+.services li a:active{
     box-shadow: 0 1px 0 #ffffff, inset 0 1px 0 #ffffff;
     background-color: #ffffff;
-}
-.services a{
-    color: #ffffff;
-    font-size: 21px;
-    line-height: 30px;
-    font-weight: 700;
-}
-.services a:hover, a:focus{
     color: #32425c;
+}
 }
 .services h3{
     font-size: 36px;
@@ -375,14 +475,11 @@ h2{
     height: 123px;
 }
 .banners-group div a{
-    display: block;
     width: 135px;
-    height: 38px;
     font-size: 14px;
     color: #ffffff;
     line-height: 18px;
     text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0.1);
 }
 .banners-group .forth{
     width: 620px;
@@ -390,8 +487,6 @@ h2{
 }
 .banners-group .forth a{
     width: 195px;
-    height: 38px;
-    background-color: #ee3643;
 }
 .first{
     background-color: #ffbf47;
@@ -426,18 +521,65 @@ h2{
     background-color: #ffc047;
 }
 /* Красная кнопка */
-a.red-button{
-    display: block;
+a.red{
     background-color: #ee3643;
-    height: 38px;
     font-size: 14px;
     color: #ffffff;
     line-height: 18px;
     text-transform: uppercase;
 }
+/* Центровщик текста в кнопках-ссылках */
+.button{
+    display: flex;
+    height: 38px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+a.red:hover, a.red:focus{
+    background-color: #ca2c37;
+}
+a.red:active{
+    background-color: #ba2732;
+}
+a.grey{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+a.grey:hover, a.grey:focus{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+a.grey:active{
+    background-color: rgba(0, 0, 0, 0.3);
+}
 .popular-producers, .popular-items{
     background-color: #f9f5f0;
 }
+.producers{
+    width: 940px;
+}
+.producers ul, .producers li{
+    display: flex;
+}
+.producers ul{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.producers li{
+    width: 220px;
+    height: 145px;
+    border: 1px solid #e5e5e5;
+    justify-content: center;
+    align-items: center;
+}
+.producers li:hover{
+    box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+    border: none;
+}
+.producers li a:active{
+    opacity: 0.3;
+}
+
 
 .visually-hidden {
     position: absolute;
