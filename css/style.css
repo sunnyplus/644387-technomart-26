@@ -49,7 +49,9 @@
         url('MyriadPro-Regular.eot') format('embedded-opentype'),
         url('MyriadPro-Regular.woff') format('woff');
 }
-
+html{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     padding: 0;
@@ -59,6 +61,16 @@ body{
     font-size: 17px;
     background-color: #ffffff;
 }
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 header{
     display: flex;
     flex-direction: column;
@@ -71,6 +83,10 @@ header{
 }
 a{
     text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
 }
 
 .main-navigation ul, .products ul, .producers ul, .shop-info ul, .site-navigation ul, .footer-navigation ul, .services ul, .social ul, .breadcrumbs ul, form ul, .pagination ul, .popular-products ul{
@@ -125,6 +141,10 @@ a{
 }
 .order-button a:active{
     opacity: 0.5;
+}
+/* Стилизация форм */
+input[type=radio], input[type=checkbox]{
+    display: none;
 }
 .search-field input{
     background-color: inherit;
@@ -198,17 +218,28 @@ a{
 .site-navigation ul{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    height: 100%;
     margin: 0;
 }
-.site-navigation li:hover{
+.site-navigation ul li{
+    /* height: inherit; */
+    /* width: 100%; */
+}
+.site-navigation a{
+    /* vertical-align: middle; */
+}
+.site-navigation a:hover{
     background-color: #293449;
 }
-.site-navigation li a:active{
+.site-navigation a:active{
     opacity: 0.5;
 }
-.site-navigation li a{
+/* .site-navigation a{
     line-height: 60px;
-}
+} */
 
 /* Хлебные крошки */
 .breadcrumbs ul{
@@ -698,14 +729,5 @@ a.grey:active{
 }
 
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
+
   
