@@ -73,7 +73,7 @@ a{
     text-decoration: none;
 }
 
-.main-navigation ul, ul.products, .producers ul, .shop-info ul, .site-navigation ul, .footer-navigation ul{
+.main-navigation ul, .products ul, .producers ul, .shop-info ul, .site-navigation ul, .footer-navigation ul, .services ul, .social ul, .breadcrumbs ul, form ul, .pagination ul, .popular-products ul{
     list-style: none;
     padding:0;
 
@@ -93,6 +93,9 @@ a{
 }
 /* логотип */
 .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 220px;
     height: 47px;
     box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
@@ -135,7 +138,17 @@ a{
 .search-field input:focus + label{
     font-size: 0px;
 }
+/* Инфо о магазине в шапке */
+.header-information{
+    display: flex;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+}
+.header-information div:nth-child(2){
+    width: 270px;
+}
 .shop-description{
+    width: 196px;
     line-height: 23px;
     font-style: italic;
     font-size: 16px;
@@ -185,6 +198,7 @@ a{
 .site-navigation ul{
     display: flex;
     justify-content: space-around;
+    margin: 0;
 }
 .site-navigation li:hover{
     background-color: #293449;
@@ -197,6 +211,12 @@ a{
 }
 
 /* Хлебные крошки */
+.breadcrumbs ul{
+    display: flex;
+}
+.breadcrumbs li{
+    padding-right: 39px;
+}
 .breadcrumbs a{
     font-family: "PT Sans";
     font-size: 13px;
@@ -238,11 +258,14 @@ legend{
     background-color: #ffffff;
 }
 /* Каталог товаров */
-.products{
+h1 + section{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    /* width: 700px; */
+}
+.products{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
 }
 .products ul{
     padding: 0;
@@ -256,31 +279,30 @@ legend{
     font-size: 18px;
     line-height: 20px;
 }
-.products p{
-    display: block;
+.item p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 141px;
     height: 38px;
     text-transform: uppercase;
     line-height: 18px;
 }
-.products li{
+.item {
     width: 220px;
-    height: 318px;
-    border: 1px solid #e5e5e5;
+    min-height: 318px;
+    border: 1px solid #e5e5e5; 
 }
-.products li p:first-of-type{
+.item p:first-of-type{
     color: #999999;
     text-decoration: line-through;
 }
-.products li:nth-child(3n) p{
-    text-decoration: none;
-}
-.products li p:last-of-type{
+.item p:last-of-type{
     background-image: url('../img/red-button.svg');
     background-repeat: no-repeat;
     color: #ffffff;
 }
-.products li button{
+.item button{
     width: 135px;
     height: 38px;
     border-radius: 5px;
@@ -289,7 +311,7 @@ legend{
     line-height: 18px;
     text-transform: uppercase;
 }
-.products li:hover{
+.item:hover{
     border: none;
     box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
@@ -306,20 +328,23 @@ input[type=number]{
     width: 95px;
     height: 38px;
 }
-.sort{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 700px;
-    height: 38px;
-    background-color: #f7f3ec;
-    font-family: "PT Sans";
-    font-size: 13px;
-    text-transform: uppercase;
+.filter{
+    width: 220px;
 }
 .filter h3, .sort h3{
     font-size: 13px;
     line-height: 18px;
+}
+.sort{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: 38px;
+    background-color: #f7f3ec;
+    font-family: "PT Sans";
+    font-size: 13px;
+    text-transform: uppercase;
 }
 .sort a{
     color: rgba(0, 0, 0, 0.3);
@@ -360,6 +385,7 @@ input[type=number]{
 /* Пагинация */
 .pagination ul{
     display: flex;
+    justify-content: flex-start;
 }
 .pagination li a{
     border: 1px solid #e5e5e5;
@@ -391,6 +417,20 @@ h2{
     line-height: 30px;
     text-transform: uppercase;
 }
+.shop-info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 86px;
+}
+.shop-info div:first-of-type{
+    width: 519px;
+}
+.shop-info div:first-of-type a{
+    width: 220px;
+}
+.shop-info div:last-of-type{
+    width: 300px;
+}
 .shop-info p, .services p, .perforator-info p{
     font-family: "PT Sans",sans-serif;
     font-size: 13px;
@@ -401,7 +441,6 @@ h2{
     line-height: 20px;
 }
 .shop-info a{
-    display: block;
     background-color: #ee3643;
     color: #ffffff;
     font-size: 14px;
@@ -409,10 +448,18 @@ h2{
     line-height: 18px;
 }
 .services{
+    display: flex;
+    flex-wrap:wrap;
     background-color: #f4f8f9;
-    background-image: url("../img/layer_131.png");
-    background-repeat: no-repeat;
-    background-position: 90% 50%;
+}
+.services div:first-of-type{
+    width: 100%;
+}
+.services div:last-of-type{
+    /* width: 275px; */
+    flex-grow: 1;
+    padding-left: 80px;
+    background: url("../img/layer_131.png") no-repeat 90%;
 }
 .services li{
     display: flex;
@@ -426,6 +473,10 @@ h2{
     color: #ffffff;
     line-height: 30px;
 }
+.services .current{
+    background-color: #fff;
+    color: #32425c;
+}
 .services li:hover{
     background-color: #293449;
 }
@@ -433,7 +484,6 @@ h2{
     box-shadow: 0 1px 0 #ffffff, inset 0 1px 0 #ffffff;
     background-color: #ffffff;
     color: #32425c;
-}
 }
 .services h3{
     font-size: 36px;
@@ -445,7 +495,11 @@ h2{
 .footer-navigation{
     background-color: #32425c;
 }
-.footer-navigation ul{
+.footer-navigation > div{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-navigation > div ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -455,7 +509,7 @@ h2{
     line-height: 24px;
     font-size: 18px;
 }
-.footer-navigation a{
+.footer-navigation div:first-of-type a{
     color: #f1f5f7;
     font-size: 18px;
     line-height: 24px;
@@ -463,26 +517,39 @@ h2{
 .footer-navigation a:hover, .footer-navigation a:focus{
     text-decoration: underline;
 }
+.footer-navigation li:not(:last-of-type){
+    margin-right: 60px;
+}
 .footer-navigation a:active{
     opacity: 0.5;
 }
-.footer-navigation ul:last-of-type a{
+.footer-navigation div:last-of-type ul a{
     color: #ffd180;
 }
-.social-networks{
+.social{
     background-color: #293449;
     color: #ffffff;
     font-size: 16px;
     line-height: 18px;
 }
-.social-networks a{
+.social div{
+    min-height: 107px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social a{
     color: #ffd180;
 }
-.social-networks a:hover, .social-networks a:focus{
+.social a:hover, .social a:focus{
     text-decoration: underline;
 }
-.social-networks a:active{
+.social a:active{
     color: #ee3643;
+}
+.social-icons{
+    display: flex;
+    justify-content: space-between;
 }
 .social-icons a{
     background-color: #212a3a;
@@ -496,7 +563,7 @@ h2{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.banners-group div{
+.banners-group div div{
     font-size: 24px;
     line-height: 30px;
     color: #ffffff;
@@ -510,6 +577,18 @@ h2{
     color: #ffffff;
     line-height: 18px;
     text-transform: uppercase;
+}
+.banners-group .first-block, .banners-group .second-block{
+    display: flex;
+    flex-wrap: wrap;
+}
+.first-block{
+    width: 620px;
+    justify-content: space-between;
+}
+.second-block{
+    width: 300px;
+    align-content: space-between;
 }
 .banners-group .forth{
     width: 620px;
@@ -564,7 +643,7 @@ a.red{
     height: 38px;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 3px;
     text-transform: uppercase;
 }
 a.red:hover, a.red:focus{
@@ -582,7 +661,12 @@ a.grey:hover, a.grey:focus{
 a.grey:active{
     background-color: rgba(0, 0, 0, 0.3);
 }
-.popular-producers, .popular-items{
+.popular-products ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.popular-products > div, .producers > div{
     display: flex;
     justify-content: space-between;
     align-items: center;
