@@ -18,8 +18,8 @@
             <ul>
               <li class="search-field">
                 <form action="http://echo.htmlacademy.ru" method="post">
-                  <!-- <label for="search">Поиск:</label> -->
-                  <input id="search" type="text" name="search">
+                  <label for="search"></label>
+                  <input id="search" type="text" name="search" autocomplete="off">
                 </form>
               </li>
               <li class="bookmarks-button"><a href="#">Закладки: 0</a></li>
@@ -35,12 +35,10 @@
         </nav>
       </section>
       <div class="header-information container">
-        <div>
-          <p class="shop-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
-        </div>
-        <div>
-          <p class="shop-phone">+7(812)555-05-55</p>
-          <p class="shop-address">г.Санкт-Петербург, ул.Б.Конюшенная, д.79/8</p>
+        <div class="shop-description">Интернет-магазин строительных материалов и инструментов для ремонта</div>
+        <div class="shop-contacts">
+          <p class="shop-phone">+7 (812) 555-05-55</p>
+          <p class="shop-address">г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8</p>
         </div>
         <button class="signin" type="button">Войти</button>
         <button class="signup" type="button">Регистрация</button>
@@ -57,8 +55,8 @@
         </ul>
       </nav>
     </header>
-    <main class="container">
-      <section class="banners-group">
+    <main>
+      <section class="banners-group container">
         <h2 class="visually-hidden">Группа баннеров на главной странице</h2>
         <div class="first-block">
           <div class="first">
@@ -91,43 +89,54 @@
           </div>
         </div>
       </section>
-      <section class="popular-products">
+      <section class="popular-products container">
         <div>
           <h2>популярные товары:</h2>
           <a class="button red" href="#">все популярные товары</a>
         </div>
         <ul>
-          <li class="item">
-            <a href="#"><img src="img/perforator_1.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
+          <li class="item new-flag">
+            <a href="#">
+              <div class="item-image">
+                  <img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 9000">
+              </div>
               <h3>Перфоратор BOSCH BFG 9000</h3>
               <p class="price-old">32500 Р.</p>
               <p class="price">25500 Р.</p>
             </a>
           </li>
           <li class="item">
-            <a href="#"><img src="img/perforator_2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+            <a href="#">
+              <div class="item-image">
+                  <img src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 3000">
+              </div>
               <h3>Перфоратор BOSCH BFG 3000</h3>
               <p class="price-old">22500 Р.</p>
               <p class="price">15500 Р.</p>
             </a>
           </li>
           <li class="item">
-            <a href="#"><img src="img/perforator_3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
+            <a href="#">
+              <div class="item-image">
+                <img src="img/perforator_3.jpg" alt="Перфоратор BOSCH BFG 6000">
+              </div>
               <h3>Перфоратор BOSCH BFG 6000</h3>
               <p class="price-old">30500 Р.</p>
               <p class="price">25500 Р.</p>
             </a>
           </li>
           <li class="item">
-            <div class="new-flag"></div>
-            <a href="#"><img src="img/perforator_4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-              <h3>Перфоратор BOSCH BFG 2000</h3>
+            <a href="#">
+              <div class="item-image">
+                <img src="img/perforator_4.jpg" alt="Перфоратор BOSCH BFG 2000">
+              </div>
+              <h3>Перфоратор BOSCH BFG 6000</h3>
               <p class="price">12500 Р.</p>
             </a>
           </li>
         </ul>
       </section>
-      <section class="popular-producers">
+      <section class="popular-producers container">
         <div>
           <h2>популярные производители:</h2>
           <a class="button red" href="#">все производители</a>
@@ -144,25 +153,40 @@
         </ul>
       </section>
       <section class="services">
-        <div>
-          <h2>Сервисы</h2>
-          <p>Хороший интернет-магазин отличается от плохого не только ценами! <br>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        </div>
-        <div class="service-menu">
-          <ul>
-            <li><a class="current" href="#">Доставка</a></li>
-            <li><a href="#">Гарантия</a></li>
-            <li><a href="#">Кредит</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Доставка</h3>
-          <p>Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно! <br> Ведь мы неплохо заработаем, <br> поднимая его на ваш этаж</p>
+        <div class="container">
+          <div class="services-info">
+            <h2>Сервисы</h2>
+            <p>Хороший интернет-магазин отличается от плохого не только ценами! <br>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          </div>
+          <div class="service-menu">
+            <ul>
+              <li><a data-service='delivery-info' class="current" href="#">Доставка</a></li>
+              <li><a data-service='garanty-info' href="#">Гарантия</a></li>
+              <li><a data-service='credit-info' href="#">Кредит</a></li>
+            </ul>
+          </div>
+          <div data-type='menu' class="delivery-info">
+            <h3>Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно! <br> Ведь мы неплохо заработаем, <br> поднимая его на ваш этаж</p>
+          </div>
+          <div data-type='menu' class="garanty-info hidden">
+            <h3>Гарантия</h3>
+            <p>Если купленный у нас товар поломается или заискрит,<br>
+              а также в случае пожара, спровоцированного его возгоранием,<br>  вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br> сгоревший товар на новый.<br> 
+              Дом уж восстановите как-нибудь сами.
+            </p>
+          </div>
+          <div data-type='menu' class="credit-info hidden">
+            <h3>Кредит</h3>
+            <p>Залезть в долговую яму стало проще!<br>
+              Кредитные консультанты придут вам на помощь.
+            </p>
+          </div>
         </div>
       </section>
-      <section class="shop-info">
+      <section class="shop-info container">
         <div>
-          <h2>Компания "Техномарт"</h2>
+          <h2>Компания &laquoТехномарт&raquo</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и <br>строительства не оставит равнодушными любителей сэкономить на гастарбайтерах</p>
           <p>Мы можем доставить Ваш товар в самые отдалённые точки Росси! <br>Техномарт работает со многими транспортными компаниями:</p>
           <ul>
@@ -172,10 +196,19 @@
           </ul>
           <a class="button red" href="#">подробнее о компании</a>
         </div>
-        <div>
+        <div class="shop-contacts">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, <br>заехав в наш офис:</p>
-          <div><img src="img/map.png" alt="Офис компании Техномарт по адресу г.Санкт-Петербург, ул.Большая Конюшенная, д.79/8"></div>
+          <div class="map">
+            <a href="#">
+              <img src="img/map.png" alt="Офис компании Техномарт по адресу г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8">
+            </a>
+            <div class="map-popup visually-hidden">
+              <img src="img/map_popup.png" alt="Офис компании Техномарт по адресу г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8">
+              <span class="modal-close"></span>
+            </div>
+            <!-- <img class="map-popup" src="img/map_popup.png" alt="Офис компании Техномарт по адресу г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8"> -->
+          </div>
           <a class="button red" href="#">Заблудились? Напишите нам</a>
         </div>
       </section>
@@ -201,7 +234,7 @@
           </div>
         </div>
         <div class="container">
-          <p class="footer-address">г.Санкт-Петербург, ул.Большая Конюшенная, д.79/8 <br>+7(812)555-05-55</p>
+          <p class="footer-address">г.Санкт-Петербург, ул.Б. Конюшенная, д.19/8 <br>+7(812)555-05-55</p>
           <ul class="second-nav">
             <li><a href="#">Материалы</a></li>
             <li><a href="#">Техника</a></li>
@@ -253,5 +286,6 @@
         <button type="button" aria-label="Закрыть">X</button>
       </form>
     </section>
+    <script src="js/script.js"></script>
   </body>
 </html>
