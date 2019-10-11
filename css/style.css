@@ -80,6 +80,9 @@ header{
     min-height: 320px;
     background-color: #f3f7f8;
 }
+main{
+    position: relative;
+}
 .container{
     width:940px;
     margin: 0 auto;
@@ -625,7 +628,8 @@ legend{
     height: 170px;
     margin: 0 auto;
 }
-.item:hover .item-buttons{
+.item a:hover .item-buttons,
+.item a:focus .item-buttons{
     display: block;
 }
 .item-buttons{
@@ -1110,8 +1114,8 @@ h2{
 } */
 .modal-close {
     position: absolute;
-    top: 10px;
-    left: 910px;
+    /* top: 10px; */
+    /* left: 910px; */
     width: 21px;
     height: 21px;
     background:url("../img/icon-close.svg") no-repeat;
@@ -1422,6 +1426,61 @@ a.grey:active{
 .popular-producers li a:active{
     opacity: 0.3;
 }
-
-
-
+/* модальное окно: товар добавлен в корзину */
+.cart-modal{
+    display: none;
+    position: fixed;
+    background-color: #fff;
+    top: 50%;
+    margin-left: 50%;
+    margin-right: 50%;
+    transform:translate(-50%,-50%);
+    width: 620px;
+    min-height: 282px;
+    box-shadow: 0 20px 40px rgba(41, 52, 73, 0.75);
+}
+.cart-modal div:first-child{
+    height: 7px;
+    background-color: #ee3643;
+}
+.cart-modal .action-buttons{
+    display: flex;
+    justify-content: center;
+    background-color: #f1f1f1;
+    padding-bottom: 37px;
+    padding-top: 37px;
+    text-transform: uppercase;
+}
+.cart-modal .modal-close{
+    right: 9px;
+    top: 16px;
+}
+.action-buttons a{
+    margin-right: 20px;
+    min-width: 220px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.action-buttons button{
+    font-size: 14px;
+    font-family: "Cuprum";
+    line-height: 18px;
+    min-width: 220px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #fff;
+    border:none;
+    cursor: pointer;
+}
+.poduct-to-cart{
+    background: url("../img/icon-mark.svg") no-repeat;
+    background-position: 81px 50%;
+    padding-top: 68px;
+    padding-bottom: 68px;
+}
+.poduct-to-cart h2{
+    margin: 0;
+    margin-left: 179px;
+    text-transform: none;
+    font-weight: 400;
+}
