@@ -18,8 +18,9 @@
             <ul>
               <li class="search-field">
                 <form action="http://echo.htmlacademy.ru" method="post">
-                  <label for="search"></label>
                   <input id="search" type="text" name="search" autocomplete="off">
+                  <label for="search">Поиск:</label>
+                  <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
                 </form>
               </li>
               <li class="bookmarks-button"><a href="#">Закладки: 0</a></li>
@@ -40,7 +41,10 @@
           <p class="shop-phone">+7 (812) 555-05-55</p>
           <p class="shop-address">г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8</p>
         </div>
-        <button class="signin" type="button">Войти</button>
+        <button class="signin" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"/><path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/></svg>
+          Войти
+        </button>
         <button class="signup" type="button">Регистрация</button>
       </div>
       <nav class="site-navigation container">
@@ -69,7 +73,7 @@
           </div>
           <div class="forth">
             <p>Дрели</p>
-            <p>Соседям на радость</p>
+            <p>Соседям на радость!</p>
             <a class="button red" href="catalog.html">Открыть Каталог</a>
           </div>
         </div>
@@ -95,10 +99,14 @@
           <a class="button red" href="#">все популярные товары</a>
         </div>
         <ul>
-          <li class="item new-flag">
+          <li class="item">
             <a href="#">
               <div class="item-image">
-                  <img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 9000">
+                <img src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 9000">
+                <div class="item-buttons">
+                  <button type="button">Купить</button>
+                  <button type="button">В закладки</button>
+                </div>
               </div>
               <h3>Перфоратор BOSCH BFG 9000</h3>
               <p class="price-old">32500 Р.</p>
@@ -108,7 +116,11 @@
           <li class="item">
             <a href="#">
               <div class="item-image">
-                  <img src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 3000">
+                <img src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 3000">
+                <div class="item-buttons">
+                  <button type="button">Купить</button>
+                  <button type="button">В закладки</button>
+                </div>
               </div>
               <h3>Перфоратор BOSCH BFG 3000</h3>
               <p class="price-old">22500 Р.</p>
@@ -119,18 +131,26 @@
             <a href="#">
               <div class="item-image">
                 <img src="img/perforator_3.jpg" alt="Перфоратор BOSCH BFG 6000">
+                <div class="item-buttons">
+                  <button type="button">Купить</button>
+                  <button type="button">В закладки</button>
+                </div>
               </div>
               <h3>Перфоратор BOSCH BFG 6000</h3>
               <p class="price-old">30500 Р.</p>
               <p class="price">25500 Р.</p>
             </a>
           </li>
-          <li class="item">
+          <li class="item new-flag">
             <a href="#">
               <div class="item-image">
                 <img src="img/perforator_4.jpg" alt="Перфоратор BOSCH BFG 2000">
+                <div class="item-buttons">
+                  <button type="button">Купить</button>
+                  <button type="button">В закладки</button>
+                </div>
               </div>
-              <h3>Перфоратор BOSCH BFG 6000</h3>
+              <h3>Перфоратор BOSCH BFG 2000</h3>
               <p class="price">12500 Р.</p>
             </a>
           </li>
@@ -196,22 +216,32 @@
           </ul>
           <a class="button red" href="#">подробнее о компании</a>
         </div>
-        <div class="shop-contacts">
+        <div class="shop-map">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, <br>заехав в наш офис:</p>
           <div class="map">
             <a href="#">
               <img src="img/map.png" alt="Офис компании Техномарт по адресу г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8">
             </a>
-            <div class="map-popup visually-hidden">
+            <div class="map-popup hidden">
               <img src="img/map_popup.png" alt="Офис компании Техномарт по адресу г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8">
               <span class="modal-close"></span>
             </div>
-            <!-- <img class="map-popup" src="img/map_popup.png" alt="Офис компании Техномарт по адресу г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8"> -->
           </div>
           <a class="button red" href="#">Заблудились? Напишите нам</a>
         </div>
       </section>
+      <div class="cart-modal hidden">
+        <div></div>
+        <div class="poduct-to-cart">
+            <h2>Товар добавлен в корзину!</h2>
+        </div>
+        <div class="action-buttons">
+          <a class="button red" href="#">Оформить заказ</a>
+          <button class="button" type="button">Продолжить покупки</button>
+        </div>
+        <span class="modal-close"></span>
+      </div>
     </main>  
     <footer>
       <section class="footer-navigation">
@@ -257,35 +287,28 @@
         </div>
       </section>
     </footer>
-    <section class="visually-hidden">
-      <h2 class="visually-hidden">Обратная связь</h2>
+    <div class="feedback-modal hidden">
+      <div></div>
       <form action="http://echo.htmlacademy.ru" method="post">
-        <div>
-          <p>
+        <div class="user-firstname">
             <label for="user-firstname">Ваше имя:</label>
-          </p>
-          <p>
-            <input type="text" name="firstname" id="user-firstname" placeholder="Имя Фамилия">
-          </p>
+            <input type="text" name="firstname" id="user-firstname" placeholder="Имя Фамилия" required>
         </div>
-        <div>
-          <p>
+        <div class="user-email">
             <label for="user-email">Ваш e-mail:</label>
-          </p>
-          <p>
-            <input name="email" type="email" id="user-email" placeholder="email@example.com">
-          </p>
+            <input name="email" type="email" id="user-email" placeholder="email@example.com" required>
         </div>
-        <p>
+        <div class="user-message">
           <label for="user-message">Текст письма:</label>
-        </p>
-        <p>
           <textarea name="message" id="user-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-        </p>
-        <button type="submit">Отправить</button>
-        <button type="button" aria-label="Закрыть">X</button>
+        </div>
       </form>
-    </section>
+      <div class="action-buttons">
+        <button class="button red" type="submit">Отправить</button>
+      </div>
+      <span class="modal-close"></span>
+    </div>
     <script src="js/script.js"></script>
+    <script src="js/script-index.js"></script>
   </body>
 </html>

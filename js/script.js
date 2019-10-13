@@ -1,45 +1,24 @@
-let mapPopup = document.querySelector(".map-popup"),
-    serviceLink = document.querySelectorAll(".service-menu a"),
-    currentItem,
+var goonShopping = document.querySelectorAll(".action-buttons button"),
+    cartButtons = document.querySelectorAll(".item-buttons button:first-of-type"),
     menu = document.querySelectorAll('[data-type=menu]'),
-    service;
+    service,
+    cartModal = document.querySelector(".cart-modal");
 
-document.querySelector('.modal-close').addEventListener('click', function(evt){
-    // console.log(this.parentNode);
-    this.parentNode.classList.toggle('visually-hidden');
-})
-
-document.querySelector(".map a").addEventListener("click", function(evt){
-    evt.preventDefault();
-    mapPopup.classList.toggle('visually-hidden');
+document.querySelectorAll('.modal-close').forEach(function(elm){
+    elm.addEventListener('click', function(){
+        this.parentNode.classList.toggle('hidden');
+    });
 });
-
-serviceLink.forEach(function(elm, i){
-    elm.addEventListener('click', function(evt){
+// добавляем товар в корзину
+cartButtons.forEach(function(elm){
+    elm.addEventListener('click',function(evt){
         evt.preventDefault();
-        service = this.dataset.service;
-        
-        // деактивируем все пункты меню
-        for(let j=0; j<serviceLink.length; j++) {
-            if(serviceLink[j].classList.contains('current')){
-                serviceLink[j].classList.remove('current');
-            }
-        }
-        // прячем всю сервис-информацию
-        menu.forEach(function(elm){
-            if(!elm.classList.contains('hidden')){
-                elm.classList.add('hidden');
-            };
-        });
-        this.classList.add('current'); // активируем пункт меню
-        // показываем нужную скрвмс-информацию
-        
-        menu.forEach(function(elm){
-            // console.log(service);
-            if(elm.classList.contains(service)){
-                elm.classList.remove('hidden');
-            }
-        })
-        // console.log(this.dataset.service);
+        cartModal.classList.remove('hidden');
+    });
+})
+// закрываем окно сообщения
+goonShopping.forEach(function(elm){
+    elm.addEventListener('click', function(evt){
+        cartModal.classList.toggle('hidden');
     });
 });
