@@ -55,7 +55,7 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: "Cuprum",sans-serif;
+    font-family: "Cuprum","Arial",sans-serif;
     font-weight: 400;
     color: #000000;
     font-size: 17px;
@@ -220,7 +220,7 @@ button{
     opacity:0.3;
     content: "";
 }
-.cart-full-button a{
+.noempty-button a, .noempty-button a:hover{
     background-color: #ee3643;
 }
 /* Стилизация форм */
@@ -269,7 +269,7 @@ label[for="search"]{
     height: 42px;
     background-color: #293449;
     border: none;
-    font-family: "Cuprum";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
     line-height: 18px;
     padding-left: 49px;
@@ -429,6 +429,9 @@ label[for="search"]{
     padding-right: 39px;
     padding-left: 14px;
 }
+.user-name a{
+    color: #000000;
+}
 /* Навигация по сайту */
 .site-navigation{
     background-color: #32425c;
@@ -459,10 +462,6 @@ label[for="search"]{
 .site-navigation a:active{
     opacity: 0.5;
 }
-/* .site-navigation a{
-    line-height: 60px;
-} */
-
 /* Хлебные крошки */
 .breadcrumbs ul{
     display: flex;
@@ -475,7 +474,7 @@ label[for="search"]{
     position: relative;
 }
 .breadcrumbs a{
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     color: #000000;
     line-height: 18px;
@@ -511,7 +510,7 @@ h1{
 fieldset{
     position: relative;
     border:none;
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -523,7 +522,7 @@ fieldset input:disabled + label{
     color: rgba(0, 0, 0, 0.4);
 }
 legend{
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-weight: 700;
     line-height: 30px;
     margin-bottom: 15px;
@@ -568,7 +567,7 @@ legend{
 }
 .show-products{
     width: 140px;
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
     border: 1px solid #e5e5e5;
@@ -600,7 +599,7 @@ legend{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-weight: 700;
     margin: 0;
     margin-bottom: 30px;
@@ -610,7 +609,7 @@ legend{
     line-height: 20px;
 }
 .item{
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     width: 220px;
     border: 1px solid #e5e5e5;
     position: relative;
@@ -690,7 +689,7 @@ legend{
     margin-bottom: 8px;
     width: 135px;
     border-radius: 4px;
-    font-family: "Cuprum";
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
@@ -711,7 +710,7 @@ legend{
 }
 /* Фильтр */
 .catalog input{
-    font-family: "PT Sans";
+    font-family: "Cuprum", "Arial", sans-seriffont-family: "PT Sans", "Arial", sans-serif, "Arial", sans-serif;
     line-height: 38px;
     text-transform: uppercase;
     text-align: center;
@@ -806,7 +805,7 @@ legend{
 }
 .filter-title{
     background-color: #f7f3ec;
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     padding-top: 14px;
     padding-bottom: 10px;
     padding-left: 20px;
@@ -827,7 +826,7 @@ legend{
     width: 100%;
     min-height: 38px;
     background-color: #f7f3ec;
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     text-transform: uppercase;
     padding-left: 20px;
@@ -902,7 +901,7 @@ a:hover svg{
     border: 1px solid #e5e5e5;
     width: 38px;
     color: #000000;
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
     margin-right: 10px;
@@ -1062,7 +1061,7 @@ h2{
     width: 300px;
 }
 .shop-info p, .services p, .product-info-footer p{
-    font-family: "PT Sans",sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif,sans-serif;
     font-size: 13px;
     line-height: 24px;
 }
@@ -1115,20 +1114,20 @@ h2{
 .shop-map .map{
     margin-bottom: 36px;
 }
-.map-popup{
-    position: absolute;
-    left:0;
-    top:0;
+.map-modal{
+    position: fixed;
+    top: 50%;
+    margin-left: 50%;
+    transform:translate(-50%,-50%);    
+}
+.map-modal iframe{
     width: 940px;
     height: 447px;
-}
-.map-popup .modal-close{
-    top: 9px;
-    left:911px
-}
-.map-popup img{
-    max-width: none;
     box-shadow: 0 0 8px 1px #2f2a2b;
+}
+.map-modal .modal-close{
+    top: 9px;
+    left:911px;
 }
 .modal-close {
     position: absolute;
@@ -1284,7 +1283,7 @@ h2{
     padding-bottom: 22px;
     padding-left: 25px;
 }
-.banners-group .forth p:first-of-type{
+.banners-group .forth .title{
     margin-bottom: 2px;
     letter-spacing: 0.7px;
 }
@@ -1312,35 +1311,36 @@ h2{
 }
 .forth{
     position: relative;
-    background-image: url("../img/layer_99.jpg");
     background-repeat: no-repeat;
+    background-image: url("../img/layer_99.jpg");
 }
-.forth p:first-of-type{
+.forth.change-slide{
+    background-image: url("../img/layer_98.jpg");
+}
+.forth .title{
     font-size: 36px;
     line-height: 36px;
     font-weight: 700;
     text-transform: uppercase;
 }
-.forth p:last-of-type{
+.forth .slogan{
     font-size: 18px;
     line-height: 24px;
 }
-.forth::before{
+.forth .slider-button{
     position: absolute;
+    display: block;
     top:115px;
-    content: "";
     width: 22px;
     height: 40px;
-    background:url("../img/icon-left.svg") no-repeat;
+    cursor: pointer;
 }
-.forth::after{
-    position: absolute;
-    top:115px;
+.slider-button.next{
     right: 20px;
-    content: "";
-    width: 22px;
-    height: 40px;
     background:url("../img/icon-right.svg") no-repeat;
+}
+.slider-button.prev{
+    background:url("../img/icon-left.svg") no-repeat;
 }
 .fifth{
     background-color: #8ed78f;
@@ -1496,7 +1496,7 @@ a.grey:active{
 }
 .feedback-modal form input{
     min-width: 220px;
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
     padding: 8px;
@@ -1507,7 +1507,7 @@ a.grey:active{
 }
 .feedback-modal form textarea{
     width: 100%;
-    font-family: "PT Sans";
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 18px;
     min-height: 114px;
@@ -1536,7 +1536,7 @@ a.grey:active{
 }
 .action-buttons button{
     font-size: 14px;
-    font-family: "Cuprum";
+    font-family: "Cuprum", "Arial", sans-serif;
     line-height: 18px;
     min-width: 220px;
     padding-left: 5px;

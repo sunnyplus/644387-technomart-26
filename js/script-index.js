@@ -1,11 +1,13 @@
-var mapPopup = document.querySelector(".map-popup"),
+var mapModal = document.querySelector(".map-modal"),
     serviceLink = document.querySelectorAll(".service-menu a"),
-    writeUs = document.querySelector(".shop-contacts > a"),
-    feedbackModal = document.querySelector(".feedback-modal");
+    writeUs = document.querySelector(".shop-map > a"),
+    feedbackModal = document.querySelector(".feedback-modal"),
+    sliderParagraph = document.querySelectorAll(".forth .slide"),
+    sliderButtons = document.querySelectorAll(".forth .slider-button");
 
 document.querySelector(".map a").addEventListener("click", function(evt){
     evt.preventDefault();
-    mapPopup.classList.toggle('hidden');
+    mapModal.classList.toggle('hidden');
 });
 // открываем контактное окно "Заблудились..."
 writeUs.addEventListener("click", function(evt){
@@ -40,5 +42,15 @@ serviceLink.forEach(function(elm, i){
                 elm.classList.remove('hidden');
             }
         })
+    });
+});
+// меняем текст у слайдов
+sliderButtons.forEach(function(elm){
+    elm.addEventListener('click', function(evt){
+        evt.preventDefault();
+        this.parentNode.classList.toggle('change-slide');
+        sliderParagraph.forEach(function(elm){
+            elm.classList.toggle('hidden');
+        });
     });
 });
