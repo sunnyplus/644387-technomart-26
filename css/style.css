@@ -313,7 +313,6 @@ label[for="search"]{
     min-height: 153px;
 }
 .header-information div:nth-child(2){
-    /* width: 270px; */
     text-align: center;
 }
 .shop-description{
@@ -336,7 +335,6 @@ label[for="search"]{
     font-size: 21px;
     padding-top: 5px;
     padding-left: 17px;
-    /* margin-top: 7px; */
     margin: 0;
     margin-bottom: 1px;
 }
@@ -630,14 +628,14 @@ legend{
     min-height: 318px;
     margin-bottom: 19px;
 }
-.item a{
+.item{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
     padding-bottom: 5px;
 }
-.item a h3{
+.item h3{
     width: 160px;
     font-size: 18px;
     font-weight: 700;
@@ -652,9 +650,8 @@ legend{
     height: 170px;
     margin: 0 auto;
 }
-.item a:hover .item-buttons,
-.item a:focus .item-buttons{
-    /* visibility: visible; */
+.item:hover .item-buttons,
+.item:focus .item-buttons{
     opacity: 1;
 }
 .item-buttons:focus-within{
@@ -662,7 +659,6 @@ legend{
 }
 .item-buttons{
     padding-top: 43px;
-    /* visibility: hidden; */
     opacity: 0;
     background-color: #fff;
     position: absolute;
@@ -709,7 +705,6 @@ legend{
 }
 .item button:first-of-type::before{
     position: absolute;
-    /* top:0; */
     left:12px;
     content:"";
     width: 15px;
@@ -1102,7 +1097,6 @@ h2{
     padding-left: 36px;
 }
 .shop-info a{
-    /* background-color: #ee3643; */
     color: #ffffff;
     font-size: 14px;
     text-transform: uppercase;
@@ -1146,6 +1140,7 @@ h2{
     width: 940px;
     height: 447px;
     box-shadow: 0 0 8px 1px #2f2a2b;
+    border:0;
 }
 .map-modal .modal-close{
     top: 9px;
