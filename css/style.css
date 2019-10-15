@@ -338,6 +338,10 @@ label[for="search"]{
     margin: 0;
     margin-bottom: 1px;
 }
+.shop-phone a{
+    text-decoration: none;
+    color: #ee3643;
+}
 .shop-phone::before{
     content:"";
     position: absolute;
@@ -1203,6 +1207,11 @@ h2{
     margin-top: 25px;
     margin-left: 5px;
 }
+.footer-address a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
 .footer-copyright{
     margin-right: 166px;
 }
@@ -1330,6 +1339,7 @@ h2{
     position: relative;
     background-repeat: no-repeat;
     background-image: url("../img/layer_99.jpg");
+    background-color: #685c53;
 }
 .forth.change-slide{
     background-image: url("../img/layer_98.jpg");
