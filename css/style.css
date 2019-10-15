@@ -1362,6 +1362,24 @@ h2{
     height: 40px;
     cursor: pointer;
 }
+.forth .slider-indicator{
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    /* background-color: #fff; */
+    background-color: #ee3643;
+    box-shadow: inset 0 0 0 10px #fff;
+    left: 295px;
+    bottom: 37px;
+    border-radius: 50%;
+}
+.slider-indicator.checked{
+    box-shadow: inset 0 0 0 2px #fff;
+}
+.slider-indicator.next{
+    left: 315px;
+}
 .slider-button.next{
     right: 20px;
     background:url("../img/icon-right.svg") no-repeat;

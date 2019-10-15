@@ -5,7 +5,8 @@ var mapModal = document.querySelector(".map-modal"),
     sliderParagraph = document.querySelectorAll(".forth .slide"),
     sliderButtons = document.querySelectorAll(".forth .slider-button"),
     firstNameStorage = localStorage.getItem('firstname'),
-    emailStorage = localStorage.getItem('email');
+    emailStorage = localStorage.getItem('email'),
+    sliderIndicator = document.querySelectorAll('.slider-indicator');
 
 document.querySelector(".map a").addEventListener("click", function(evt){
     evt.preventDefault();
@@ -97,6 +98,9 @@ for(var i=0;i<sliderButtons.length;i++){
         this.parentNode.classList.toggle('change-slide');
         for(var j=0;j<sliderParagraph.length;j++){
             sliderParagraph[j].classList.toggle('hidden');
+        }
+        for(var k=0;k<sliderIndicator.length;k++){
+            sliderIndicator[k].classList.toggle('checked');
         }
     });
 }
