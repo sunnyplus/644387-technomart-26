@@ -255,7 +255,7 @@ a.noempty-button:hover{
 .products-filter input[type=checkbox]{
     display: none;
 }
-input[type="checkbox"].producer-input + label::before{
+input.producer-input + label::before{
     position: absolute;
     left:-35px;
     width: 23px;
@@ -263,10 +263,10 @@ input[type="checkbox"].producer-input + label::before{
     background: url("../img/checkbox-off.svg") no-repeat;
     content: "";
 }
-input:checked[type="checkbox"].producer-input + label::before{
+input:checked.producer-input + label::before{
     background: url("../img/checkbox-on.svg") no-repeat;
 }
-input[type="radio"] + label::before{
+.battery-input + label::before{
     position: absolute;
     left:-35px;
     width: 25px;
@@ -274,7 +274,7 @@ input[type="radio"] + label::before{
     background: url("../img/radio-off.svg") no-repeat;
     content: "";
 }
-input:checked[type="radio"].battery-input + label::before{
+input:checked.battery-input + label::before{
     background: url("../img/radio-on.svg") no-repeat;
 }
 .search-field label{
@@ -295,6 +295,7 @@ input:checked[type="radio"].battery-input + label::before{
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
     line-height: 18px;
+    padding-left: 49px;
 }
 .search-field input:focus{
     background-color: #fff;
