@@ -140,16 +140,17 @@ img{
 .navigation{
     display: flex;
     justify-content: space-between;
+    line-height: 0;
 }
 /* логотип */
 .logo{
     position: relative;
-    /* background-color: #ff3333; */
 }
 .logo::after{
     content:"";
     position: absolute;
     bottom: -5px;
+    left: 0;
     width: 100%;
     height: 5px;
     background-color: #ff3333;
@@ -185,10 +186,11 @@ img{
     height: 23px;
 }
 /* кнопки главной навигации */
-a.order-button a,
+a.order-button,
 a.cart-button,
 a.bookmarks-button{
     min-width:150px;
+    line-height: 18px;
 }
 a.order-button{
     text-align: center;
@@ -279,6 +281,7 @@ input:checked[type="radio"].battery-input + label::before{
     position: absolute;
     top: 12px;
     left:48px;
+    line-height: 18px;
 }
 .search-field{
     position: relative;
