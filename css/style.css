@@ -84,14 +84,20 @@ body{
 .hidden{
     display: none;
 }
-header{
+header.header{
     display: flex;
     flex-direction: column;
     min-height: 320px;
     background-color: #f3f7f8;
 }
-main{
+main.main{
     position: relative;
+}
+.header h2,
+.main h2{
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
 }
 .container{
     width:940px;
@@ -109,105 +115,110 @@ img{
     max-width: 100%;
     height: auto;
 }
-button{
-    cursor: pointer;
-}
-.main-navigation ul, .products ul, .popular-producers ul, .site-navigation ul, .footer-navigation ul, .services ul, .social ul, .breadcrumbs ul, form ul, .pagination ul, .popular-products ul{
+.header-top ul, .products ul, .popular-producers ul, .site-navigation ul, .footer-navigation ul, .services ul, .social ul, .breadcrumbs ul, form ul, .pagination ul, .popular-products ul{
     list-style: none;
     padding:0;
 }
-.main-navigation{
+.header-top{
     background-color: #293449;
 }
-.main-navigation ul{
+.header-top ul{
     display: flex;
     justify-content: flex-end;
     flex-grow: 1;
     line-height: 18px;
     margin: 0;
 }
-.main-navigation ul li{
+.header-top ul li{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.main-navigation, .main-navigation a, .site-navigation a{
+.header-top, .header-top a, .site-navigation a{
     color: #ffffff;
 }
 .navigation{
     display: flex;
-}
-.strip{
-    min-height: 5px;
-    background-color: #fff;
-}
-.logo-bottom{
-    width: 220px;
-    height: 5px;
-    box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
-    background-color: #ee3643;
-}
-.strip-footer{
-    background-color: #32425c;
+    justify-content: space-between;
 }
 /* логотип */
 .logo{
+    position: relative;
+    /* background-color: #ff3333; */
+}
+.logo::after{
+    content:"";
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    height: 5px;
+    background-color: #ff3333;
+    box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
+}
+.logo-header,
+.logo-footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ff3333;
 }
 .logo a{
     line-height: 0;
-}
-.logo:hover{
-    background-color: #ca2c37;
-}
-.logo:active{
-    background-color: #ba2732;
-}
-.logo-footer a{
-    padding: 20px 41px;
+    background-color: #ff3333;
 }
 .logo-header img{
     width: 109px;
     height: 19px;
     margin: 13px 55px 10px 56px;
 }
+.logo a:hover{
+    background-color: #ca2c37;
+}
+.logo a:active{
+    background-color: #ba2732;
+}
+.logo-footer a{
+    padding: 20px 41px;
+    padding-bottom: 20px;
+}
 .logo-footer img{
     width: 138px;
     height: 23px;
 }
 /* кнопки главной навигации */
-.order-button a, .cart-button a, .bookmarks-button a{
+a.order-button a,
+a.cart-button,
+a.bookmarks-button{
     min-width:150px;
 }
-.order-button a{
+a.order-button{
     text-align: center;
-    padding: 12px 5px;
+    padding: 12px 21px;
     background-color: #63a63e;
 }
-.order-button a:hover{
+a.order-button:hover{
     background-color: #5fbb2d;
 }
-.order-button a:active{
+a.order-button:active{
     background-color: #518534;
 }
-.order-button a:active{
+a.order-button:active{
     opacity: 0.5;
 }
-.bookmarks-button a{
+a.bookmarks-button{
     position: relative;
     padding: 12px 25px 12px 5px;
     text-align: right;
 }
-.bookmarks-button a:hover, .cart-button a:hover, .search-field a:hover{
+a.bookmarks-button:hover,
+a.cart-button:hover,
+a.search-field:hover{
     background-color: #212a3a;
 }
-.bookmarks-button a:active, .cart-button a:active{
+a.bookmarks-button:active,
+a.cart-button:active{
     opacity: 0.6;
 }
-.bookmarks-button a::before{
+a.bookmarks-button::before{
     position: absolute;
     left:15px;
     width: 14px;
@@ -216,12 +227,12 @@ button{
     opacity:0.3;
     content: "";
 }
-.cart-button a{
+a.cart-button{
     position: relative;
     text-align: center;
     padding: 12px 5px 12px 20px;
 }
-.cart-button a::before{
+a.cart-button::before{
     position: absolute;
     left:20px;
     width: 15px;
@@ -230,17 +241,19 @@ button{
     opacity:0.3;
     content: "";
 }
-.noempty-button a, .noempty-button a:hover{
+a.noempty-button,
+a.noempty-button:hover{
     background-color: #ee3643;
 }
 /* Стилизация форм */
-label{
+.products-filter label{
     position: relative;
 }
-input[type=radio], input[type=checkbox]{
+.products-filter input[type=radio],
+.products-filter input[type=checkbox]{
     display: none;
 }
-input[type="checkbox"] + label::before{
+input[type="checkbox"].producer-input + label::before{
     position: absolute;
     left:-35px;
     width: 23px;
@@ -248,7 +261,7 @@ input[type="checkbox"] + label::before{
     background: url("../img/checkbox-off.svg") no-repeat;
     content: "";
 }
-input:checked[type="checkbox"] + label::before{
+input:checked[type="checkbox"].producer-input + label::before{
     background: url("../img/checkbox-on.svg") no-repeat;
 }
 input[type="radio"] + label::before{
@@ -259,10 +272,10 @@ input[type="radio"] + label::before{
     background: url("../img/radio-off.svg") no-repeat;
     content: "";
 }
-input:checked[type="radio"] + label::before{
+input:checked[type="radio"].battery-input + label::before{
     background: url("../img/radio-on.svg") no-repeat;
 }
-label[for="search"]{
+.search-field label{
     position: absolute;
     top: 12px;
     left:48px;
@@ -270,9 +283,6 @@ label[for="search"]{
 .search-field{
     position: relative;
     flex-grow: 1;
-}
-.search-field form{
-    width: 100%;
 }
 .search-field input{
     width: 100%;
@@ -282,7 +292,6 @@ label[for="search"]{
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
     line-height: 18px;
-    padding-left: 49px;
 }
 .search-field input:focus{
     background-color: #fff;
@@ -308,9 +317,9 @@ label[for="search"]{
 .header-information{
     display: flex;
     align-items: flex-start;
-    padding-top: 40px;
+    padding-top: 45px;
     justify-content: space-between;
-    min-height: 153px;
+    min-height: 158px;
 }
 .header-information div:nth-child(2){
     text-align: center;
@@ -370,16 +379,13 @@ label[for="search"]{
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 12px;
-    margin-bottom: 25px;
-    margin-right: 10px;
+    padding-right: 27px;
 }
 .signin svg{
     margin-right: 15px;
 }
 .signup{
-    margin-bottom: 25px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 12px 25px;
 }
 .signin:hover, .signup:hover, .signin:focus, .signup:focus{
     color: #ee3643;
@@ -397,7 +403,7 @@ label[for="search"]{
     min-width: 299px;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding-left: 20px;
 }
 .user-info ul{
     display: flex;
@@ -513,36 +519,38 @@ label[for="search"]{
     top:5px;
     background:url("../img/icon-right-small.svg") no-repeat;
 }
-h1,h2,legend,fieldset{
+/* h2{
     text-transform: uppercase;
-}
-h1{
+} */
+.catalog-title h1{
     color: #32425c;
     font-size: 30px;
     line-height: 30px;
+    text-transform: uppercase;
 }
 /* Формы */
-fieldset{
+.products-filter fieldset{
     position: relative;
     border:none;
     font-family: "PT Sans", "Arial", sans-serif;
     margin: 0;
     padding: 0;
+    text-transform: uppercase;
 }
-fieldset label{
+.products-filter label{
     line-height: 20px;
     font-size: 15px;
 }
-fieldset input:disabled + label{
+.products-filter input:disabled + label{
     color: rgba(0, 0, 0, 0.4);
 }
-legend{
+.products-filter legend{
     font-family: "PT Sans", "Arial", sans-serif;
     font-weight: 700;
     line-height: 30px;
     margin-bottom: 15px;
 }
-.prices-box{
+.products-filter .prices-box{
     margin-bottom: 40px;
 }
 .prices-box::after{
@@ -553,7 +561,7 @@ legend{
     height: 1px;
     background-color: #e5e5e5;
 }
-.producers-box{
+.products-filter .producers-box{
     margin-bottom: 20px;
 }
 .producers-box ul{
@@ -570,7 +578,7 @@ legend{
     height: 1px;
     background-color: #e5e5e5;
 }
-.battery-box{
+.products-filter .battery-box{
     margin-bottom: 58px;
 }
 .battery-box ul{
@@ -636,7 +644,6 @@ legend{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
     padding-bottom: 5px;
 }
 .item h3{
@@ -878,10 +885,10 @@ a.sort-functional:focus{
     fill:#c5c5c5;
     border:none;
 }
-a.active svg{
+.sort a.active svg{
     fill:#ee3643;
 }
-a:hover svg{
+.sort a:hover svg{
     fill:#000;
     border:none;
 }
@@ -957,12 +964,6 @@ a:hover svg{
 .product-info-footer h2{
     margin-bottom: 25px;
 }
-/* Кнопки */
-h2{
-    font-size: 30px;
-    line-height: 30px;
-    text-transform: uppercase;
-}
 .services{
     background-color: #f4f8f9;
     padding-top: 43px;
@@ -993,7 +994,7 @@ h2{
     position: absolute;
     right:0px;
     top:200px;
-    min-width: 619px;
+    width: 619px;
     min-height: 282px;
     background: url("../img/layer_131.png") no-repeat;
     background-position: 100% 100%;
@@ -1002,7 +1003,7 @@ h2{
     position: absolute;
     right:0px;
     top:200px;
-    min-width: 619px;
+    width: 619px;
     min-height: 282px;
     background: url("../img/layer_130.png") no-repeat;
     background-position: 100% 100%;
@@ -1011,7 +1012,7 @@ h2{
     position: absolute;
     right:0px;
     top:200px;
-    min-width: 619px;
+    width: 619px;
     min-height: 282px;
     background: url("../img/layer_119.png") no-repeat;
     background-position: 100% 100%;
@@ -1085,6 +1086,11 @@ h2{
     font-family: "PT Sans", "Arial", sans-serif,sans-serif;
     font-size: 13px;
     line-height: 24px;
+}
+.product-info-footer h2{
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
 }
 .shop-info p{
     margin-top: 13px;
@@ -1163,28 +1169,31 @@ h2{
     background-color: #32425c;
     padding-bottom: 35px;
 }
-.footer-navigation > div{
+.first-nav, .second-nav{
     display: flex;
     justify-content: space-between;
 }
-.first-nav, .second-nav{
+.footer-navigation .menu-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.first-menu, .second-menu{
     flex-grow:1;
     display: flex;
     justify-content: space-between;
     margin: 0;
 }
-.first-nav{
+.first-menu{
     align-items: flex-end;
     margin-left: 175px;
     margin-bottom: 5px;
 }
-.second-nav{
+.second-menu{
     align-items: center;
     margin-left: 105px;
-    margin-bottom: 15px;
-    
+    margin-bottom: 15px;    
 }
-.first-nav a{
+.first-menu a{
     color: #f1f5f7;
     font-size: 18px;
     line-height: 24px;
@@ -1194,17 +1203,19 @@ h2{
     line-height: 24px;
     font-size: 18px;
 }
-.footer-navigation a:hover, .footer-navigation a:focus{
+.footer-navigation a:hover,
+.footer-navigation a:focus{
     text-decoration: underline;
 }
-.footer-navigation a:active{
+.first-menu a:active,
+.second-menu a:active{
     opacity: 0.5;
 }
-.second-nav a{
+.second-menu a{
     color: #ffd180;
 }
 .footer-address{
-    margin-top: 25px;
+    margin-top: 30px;
     margin-left: 5px;
 }
 .footer-address a{
@@ -1256,7 +1267,8 @@ h2{
     background-color: #212a3a;
     margin-right: 3px;
 }
-.social-icons a:hover, .social-icons a:focus{
+.social-icons a:hover,
+.social-icons a:focus{
     background-color: #ee3643;
 }
 /* Группа баннеров на главной странице */
@@ -1267,7 +1279,8 @@ h2{
     padding-top: 60px;
     padding-bottom: 30px;
 }
-.banners-group div div{
+.first-block div,
+.second-block div{
     font-size: 24px;
     line-height: 30px;
     color: #ffffff;
@@ -1275,14 +1288,15 @@ h2{
     height: 123px;
     margin-bottom: 20px;
 }
-.banners-group div a{
+.banners-group a{
     width: 135px;
     font-size: 14px;
     color: #ffffff;
     line-height: 18px;
     text-transform: uppercase;
 }
-.banners-group .first-block, .banners-group .second-block{
+.banners-group .first-block,
+.banners-group .second-block{
     display: flex;
     flex-wrap: wrap;
 }
@@ -1309,11 +1323,11 @@ h2{
     padding-bottom: 22px;
     padding-left: 25px;
 }
-.banners-group .forth .title{
+.forth .title{
     margin-bottom: 2px;
     letter-spacing: 0.7px;
 }
-.banners-group .forth a{
+.forth a{
     width: 195px;
     margin-top: auto;
 }
@@ -1367,7 +1381,6 @@ h2{
     position: absolute;
     width: 10px;
     height: 10px;
-    /* background-color: #fff; */
     background-color: #ee3643;
     box-shadow: inset 0 0 0 10px #fff;
     left: 295px;
@@ -1425,6 +1438,7 @@ a.red{
     align-items: center;
     border-radius: 3px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 a.red:hover, a.red:focus{
     background-color: #ca2c37;
@@ -1441,11 +1455,11 @@ a.grey:hover, a.grey:focus{
 a.grey:active{
     background-color: rgba(0, 0, 0, 0.3);
 }
-.popular-products h2, .popular-producers h2{
+.popular-title h2{
     font-weight: 400;
     color: #32425c;
 }
-.popular-products > div a, .popular-producers > div a{
+.popular-title a{
     margin-right:24px;
     width: 253px;
 }
@@ -1455,7 +1469,7 @@ a.grey:active{
     justify-content: space-between;
     margin-top: 22px;
 }
-.popular-products > div, .popular-producers > div{
+.popular-title{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1480,23 +1494,21 @@ a.grey:active{
     min-height: 145px;
     border: 1px solid #e5e5e5;
     justify-content: center;
-    align-items: center;
 }
 .popular-products li.item{
     margin-bottom: 0;
 }
-.popular-producers li a{
+.producers-list a{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     width: 100%;
 }
-.popular-producers li a:hover{
+.producers-list a:hover{
     box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
     border: none;
 }
-.popular-producers li a:active{
+.producers-list a:active{
     opacity: 0.3;
 }
 /* модальное окно: товар добавлен в корзину */
@@ -1526,8 +1538,7 @@ a.grey:active{
     animation-name: appearance;
     animation-duration: 1s;
 }
-.cart-modal div:first-child,
-.feedback-modal > div:first-of-type{
+.red-strip{
     height: 7px;
     background-color: #ee3643;
 }
@@ -1549,7 +1560,7 @@ a.grey:active{
     min-height: 311px;
     padding:45px 80px 37px;
 }
-.feedback-modal form input{
+.feedback-form input{
     min-width: 220px;
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
@@ -1559,10 +1570,10 @@ a.grey:active{
     border: 2px solid #dee3e4;
     border-radius: 3px;
 }
-.feedback-modal form input::placeholder{
+.feedback-form input::placeholder{
     color: #a9a9a9;
 }
-.feedback-modal form textarea{
+.feedback-form textarea{
     width: 100%;
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 13px;
@@ -1573,10 +1584,12 @@ a.grey:active{
     border: 2px solid #dee3e4;
     border-radius: 3px;
 }
-.feedback-modal label{
+.feedback-form label{
     margin-bottom: 10px;
 }
-.user-firstname, .user-email, .user-message{
+.user-firstname,
+.user-email,
+.user-message{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
